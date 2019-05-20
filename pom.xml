@@ -6,7 +6,7 @@
 
     <groupId>org.mayanjun</groupId>
     <artifactId>util</artifactId>
-    <version>0.0.1.alpha</version>
+    <version>0.0.1.RELEASE</version>
 
     <name>mayanjun-util</name>
     <description>utility library</description>
@@ -37,7 +37,7 @@
         <dependency>
             <groupId>org.mayanjun</groupId>
             <artifactId>core</artifactId>
-            <version>0.0.1.alpha</version>
+            <version>0.0.1.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>commons-codec</groupId>
