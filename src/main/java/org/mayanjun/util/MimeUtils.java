@@ -4,10 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
+ * MIME utility
  * @since 2019-08-20
  * @author mayanjun
- * @vendor mayanjun.org
  */
 public final class MimeUtils {
 

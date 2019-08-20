@@ -1,14 +1,19 @@
 package org.mayanjun.util;
 
+/**
+ * String utility
+ * @since 2019-08-20
+ * @author mayanjun
+ */
 public class Strings {
 
     private Strings() {
     }
 
     /**
-     *
-     * @param cs
-     * @return
+     * Test if the string is empty
+     * @param cs string
+     * @return true if the string is null or length is 0
      */
     public static boolean isEmpty(final CharSequence cs) {
         return cs == null || cs.length() == 0;
@@ -58,7 +63,7 @@ public class Strings {
     /**
      * 随机生成字符串
      * @param len 长度
-     * @return
+     * @return random string
      */
     public static String random(int len) {
         // 33 - 126

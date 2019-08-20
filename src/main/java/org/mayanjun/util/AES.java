@@ -20,7 +20,6 @@ import java.security.Security;
  * Note that this utility using
  * @since 2019-08-20
  * @author mayanjun
- * @vendor MAYANJUN.ORG
  */
 public class AES {
 
@@ -64,7 +63,7 @@ public class AES {
      * @param content data
      * @param iv init vector
      * @param key secret key
-     * @return
+     * @return decrypted data
      */
     public static byte[] decrypt(byte content[], byte iv[], byte key[]) {
         try {
@@ -191,9 +190,9 @@ public class AES {
 
     /**
      * Generate secret key
-     * @param secretKey
-     * @return
-     * @throws Exception
+     * @param secretKey key string
+     * @return secret key
+     * @throws Exception throws internal exception
      */
     public static SecretKey generateKey(String secretKey) throws Exception {
         //防止linux下 随机生成key
@@ -206,6 +205,10 @@ public class AES {
     }
 
 
+    /**
+     * Generate init vector
+     * @return iv bytes
+     */
     public static byte[] generateIV() {
         return Strings.random(16).getBytes();
     }
