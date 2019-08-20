@@ -16,7 +16,8 @@ import java.security.SecureRandom;
 import java.security.Security;
 
 /**
- * AES utility
+ * AES utility.
+ * Note that this utility using
  * @since 2019-08-20
  * @author mayanjun
  * @vendor MAYANJUN.ORG
@@ -200,7 +201,7 @@ public class AES {
         SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG", p);
         secureRandom.setSeed(secretKey.getBytes());
         KeyGenerator kg = KeyGenerator.getInstance("AES");
-        kg.init(secureRandom);
+        kg.init(256, secureRandom);
         return kg.generateKey();
     }
 
