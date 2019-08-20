@@ -6,7 +6,7 @@
 
     <groupId>org.mayanjun</groupId>
     <artifactId>util</artifactId>
-    <version>0.0.1.RELEASE</version>
+    <version>0.0.2.RELEASE</version>
 
     <name>mayanjun-util</name>
     <description>utility library</description>
@@ -34,6 +34,12 @@
     </scm>
 
     <dependencies>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.56</version>
+        </dependency>
+
         <dependency>
             <groupId>org.mayanjun</groupId>
             <artifactId>core</artifactId>
