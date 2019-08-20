@@ -6,7 +6,7 @@
 
     <groupId>org.mayanjun</groupId>
     <artifactId>util</artifactId>
-    <version>0.0.2.RELEASE</version>
+    <version>0.0.2</version>
 
     <name>mayanjun-util</name>
     <description>utility library</description>
