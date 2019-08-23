@@ -42,8 +42,8 @@
 
         <dependency>
             <groupId>org.mayanjun</groupId>
-            <artifactId>core</artifactId>
-            <version>0.0.1.RELEASE</version>
+            <artifactId>mayanjun-core</artifactId>
+            <version>0.0.1</version>
         </dependency>
         <dependency>
             <groupId>commons-codec</groupId>
