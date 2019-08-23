@@ -5,6 +5,7 @@ Utility library. Please see homepage of [util](http://mayanjun.org/util) for mor
 ## change log
 
 * 0.0.1
-    init
+    
+    - init
 
     
