@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.mayanjun</groupId>
-    <artifactId>util</artifactId>
-    <version>0.0.2</version>
+    <artifactId>mayanjun-util</artifactId>
+    <version>0.0.1</version>
 
     <name>mayanjun-util</name>
     <description>utility library</description>
