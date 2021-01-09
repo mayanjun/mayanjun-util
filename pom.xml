@@ -6,7 +6,7 @@
 
     <groupId>org.mayanjun</groupId>
     <artifactId>mayanjun-util</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-alpah</version>
 
     <name>mayanjun-util</name>
     <description>utility library</description>

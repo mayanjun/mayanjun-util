@@ -44,15 +44,6 @@ public class AES {
     private AES() {
     }
 
-    /**
-     * 使用PKCS7Padding填充必须添加一个支持PKCS7Padding的Provider
-     * 类加载的时候就判断是否已经有支持256位的Provider,如果没有则添加进去
-     */
-    static {
-        if (Security.getProvider(BouncyCastleProvider.PROVIDER_NAME) == null) {
-            Security.addProvider(new BouncyCastleProvider());
-        }
-    }
 
     /**
      * Encrypt data
@@ -215,8 +206,8 @@ public class AES {
      */
     public static SecretKey generateKey(String secretKey) throws Exception {
         //防止linux下 随机生成key
-        Provider p = Security.getProvider("BC");
-        SecureRandom secureRandom = SecureRandom.getInstance("DEFAULT", p);
+        Provider p = Security.getProvider("SUN");
+        SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG", p);
         secureRandom.setSeed(secretKey.getBytes());
         KeyGenerator kg = KeyGenerator.getInstance("AES");
         kg.init(256, secureRandom);
