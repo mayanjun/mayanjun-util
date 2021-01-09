@@ -32,10 +32,15 @@ public class SecretKeyStore {
     public SecretKeyStore(String keyString, String iv) {
         this.keyString = keyString;
         this.iv = iv;
-        init();
+        initKey();
     }
 
-    private void init() {
+    public SecretKeyStore(SecretKey key, String iv) {
+        this.iv = iv;
+        this.key = key;
+    }
+
+    private void initKey() {
         try {
             this.key = AES.generateKey(keyString);
         } catch (Exception e) {

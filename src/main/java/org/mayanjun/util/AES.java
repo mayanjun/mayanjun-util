@@ -167,6 +167,8 @@ public class AES {
     public static String decryptString(String content, byte iv[], SecretKey key) {
         try {
             byte bs[] = decrypt(Base64.decodeBase64(content), iv, key.getEncoded());
+            if (bs == null) return null;
+
             return new String(bs, "UTF-8");
         } catch (UnsupportedEncodingException e) {
         }
@@ -198,6 +200,7 @@ public class AES {
     public static String decryptString(String content, byte iv[], byte key[]) {
         try {
             byte bs[] = decrypt(Base64.decodeBase64(content), iv, key);
+            if (bs == null) return null;
             return new String(bs, "UTF-8");
         } catch (UnsupportedEncodingException e) {
         }
@@ -212,8 +215,8 @@ public class AES {
      */
     public static SecretKey generateKey(String secretKey) throws Exception {
         //防止linux下 随机生成key
-        Provider p = Security.getProvider("SUN");
-        SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG", p);
+        Provider p = Security.getProvider("BC");
+        SecureRandom secureRandom = SecureRandom.getInstance("DEFAULT", p);
         secureRandom.setSeed(secretKey.getBytes());
         KeyGenerator kg = KeyGenerator.getInstance("AES");
         kg.init(256, secureRandom);
